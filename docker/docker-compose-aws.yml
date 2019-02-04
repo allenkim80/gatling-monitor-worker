@@ -1,0 +1,9 @@
+version: "3.2"
+services:
+  monitor-worker:
+    image: 490796368613.dkr.ecr.ap-northeast-1.amazonaws.com/sphd/qe/gatling-monitor-worker:latest
+    environment:
+      - DB_HOST=172.31.31.138
+      - DB_PORT=2003
+    ports:
+      - '8999:8999/udp'

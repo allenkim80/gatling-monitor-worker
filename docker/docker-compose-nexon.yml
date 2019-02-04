@@ -1,0 +1,11 @@
+version: "3.2"
+services:
+  monitor-worker:
+    image: d-nx-betago.sphd.io/betago/gatling-monitor-worker:0.1.2
+    network_mode: "host"
+    environment:
+      - DB_HOST=127.0.0.1
+      - DB_PORT=2003
+      - LOG_LEVEL=INFO
+    ports:
+      - '8999:8999/udp'
